@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página se visualice correctamente en dispositivos móviles -->
+    <title>hoja de vida/gabrielc</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo de estilos CSS -->
+</head>
+<body>
+
+    <div class="container"> <!-- Contenedor principal de la página -->
+        <h1>HOJA DE VIDA</h1> <!-- Título principal de la página -->
+        
+        <p>
+            
+        </p>
+        <div class="section" id="personal-info"> <!-- Sección para la información personal -->
+            <span class="title" onclick="toggleVisibility('personal-popup')">Información Personal</span> <!-- Título que activa la ventana emergente -->
+            <div id="personal-popup" class="popup"> <!-- Ventana emergente para la información personal -->
+                <h2>Información Personal</h2> <!-- Subtítulo dentro de la ventana emergente -->
+                <ul>
+                    <li>Nombre completo: Gabriel Cardoza </li> <!-- Información personal -->
+                    <li>Edad: 19 años</p> <!-- Información personal -->
+                    <li>Correo Electrónico: genriquedia@gmail.com</li></ul>
+                 <!-- Información personal -->
+                <button onclick="toggleVisibility('personal-popup')">Cerrar</button> <!-- Botón para cerrar la ventana emergente -->
+            </div>
+        </div>
+
+        
+        <div class="section" id="foto">
+            <span class="title" onclick="toggleVisibility('foto-popup')">Foto</span>
+            <div id="foto-popup" class="popup">
+            
+                <div class="image-container">
+                    <img src="C:\Users\Informatica04\Desktop\esta vaina\hoja de vida\IMG_20240904_110935962.jpg" alt="Foto del sujeto">
+                </div>
+                <button onclick="toggleVisibility('foto-popup')">Cerrar</button>
+            </div>
+        </div>
+
+
+        <div class="section" id="experience"> <!-- Sección para la experiencia laboral -->
+            <span class="title" onclick="toggleVisibility('experience-popup')">Experiencia</span> <!-- Título que activa la ventana emergente -->
+            <div id="experience-popup" class="popup"> <!-- Ventana emergente para la experiencia laboral -->
+                <h2>Experiencia</h2> <!-- Subtítulo dentro de la ventana emergente -->
+                <ul> <!-- Lista de experiencias laborales -->
+                    <li>Mantenimiento de equipos independiente</li> <!-- Experiencia laboral -->
+                    <li>Mi casa (2021-2024)</li> <!-- Experiencia laboral -->
+                </ul>
+                <button onclick="toggleVisibility('experience-popup')">Cerrar</button> <!-- Botón para cerrar la ventana emergente -->
+            </div>
+        </div>
+
+        <div class="section" id="education"> <!-- Sección para la educación -->
+            <span class="title" onclick="toggleVisibility('education-popup')">Educación</span> <!-- Título que activa la ventana emergente -->
+            <div id="education-popup" class="popup"> <!-- Ventana emergente para la educación -->
+                <h2>Educación</h2> <!-- Subtítulo dentro de la ventana emergente -->
+                <ul> <!-- Lista de educación -->
+                    <li>Licenciatura en Informática, Universidad de cordoba (2012-2016)</li> <!-- Detalle educativo -->
+                    <li>Institución Educativa Jose Maria Cordoba (2009-2021)</li> <!-- Detalle educativo -->
+                    <li>Tecnico en sistemas, Servicio Nacional De Aprendizaje (sena)</li>
+                    <li>Electricista (independiente)</li>
+                </ul>
+                <button onclick="toggleVisibility('education-popup')">Cerrar</button> <!-- Botón para cerrar la ventana emergente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Enlaza el archivo JavaScript que contiene la funcionalidad -->
+</body>
+</html>
