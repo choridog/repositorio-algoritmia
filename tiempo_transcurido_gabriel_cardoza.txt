@@ -1,0 +1,133 @@
+Algoritmo tiempo_transcurrido
+	// definimos variables de entrada
+	// hora, minutos y segundos iniciales
+	//hora, minutos y segundos finales
+	hini <- 0
+	minuini <- 0
+	Seguini <- 0
+	hfin <- 0
+	minufin <- 0
+	Segufin <- 0
+	// pedir al usuario que ingrese las variables
+	escribir "ingrese hora inicial formato 24 horas: "
+	leer hini
+	//condicion para horas iniciales
+	si hini >= 25 o hini < 0 entonces
+		Escribir "el formato es de 24 horas"
+		escribir "ingresa una hora corecta: "
+		leer hini
+		Mientras hini >= 25 o hini < 0 Hacer
+			Repetir
+				Escribir "el formato es de 24 horas"
+				escribir "ingresa una hora corecta: "
+				leer hini
+			Hasta Que hini <= 25 o hini >= 0
+		Fin Mientras
+	FinSi
+	//pedir al usuario los minutos iniciales
+	escribir "ingrese minutos iniciales: "
+	leer minuini
+	//condicional para minutos iniciales
+	si minuini > 59 o minuini < 0 entonces
+		Escribir "los minutos no deben pasar de 59"
+		escribir "ingresa una cantidad de minutos correcta: "
+		leer minuini
+		Mientras minuini >= 60 o minuini < 0 Hacer
+			Repetir
+				Escribir "los minutos no deben pasar de 59"
+				escribir "ingresa una hora corecta: "
+				leer minuini
+			Hasta Que minuini <= 59 o minuini >= 0
+		Fin Mientras
+	FinSi
+	//pedir al usuario segundos iniciales
+	Escribir "ingrese segundos iniciales: "
+	leer Seguini
+	//condicional de segundos iniciales
+	si Seguini > 59 o Seguini < 0 entonces
+		Escribir "los segundos no deben pasar de 59"
+		escribir "ingresa una cantidad de segundos correcta: "
+		leer Seguini
+		Mientras Seguini >= 60 o Seguini < 0 Hacer
+			Repetir
+				Escribir "los segundos no deben pasar de 59"
+				escribir "ingresa una hora corecta: "
+				leer Seguini
+			Hasta Que Seguini <= 59 o Seguini >= 0
+		Fin Mientras
+	FinSi
+	Escribir "la hora inicial ingresada es: " , "hora: " , hini ,  " minutos: ", minuini , " segundos: ", Seguini
+	//variables de entrada Finales
+	escribir "ingrese hora final formato 24 horas: "
+	leer hfin
+	//condicion para horas finales
+	si hfin >= 25 o hfin < 0 entonces
+		Escribir "el formato es de 24 horas"
+		escribir "ingresa una hora corecta: "
+		leer hfin
+		Mientras hfin >= 25 o hfin < 0 Hacer
+			Repetir
+				Escribir "el formato es de 24 horas"
+				escribir "ingresa una hora corecta: "
+				leer hfin
+			Hasta Que hfin <= 25 o hfin >= 0
+		Fin Mientras
+	FinSi
+	//pedir al usuario los minutos finales
+	escribir "ingrese minutos finales "
+	leer minufin
+	//condicional para minutos finales
+	si minufin > 59 o minufin < 0 entonces
+		Escribir "los minutos no deben pasar de 59"
+		escribir "ingresa una cantidad de minutos correcta: "
+		leer minufin
+		Mientras minufin >= 60 o minufin < 0 Hacer
+			Repetir
+				Escribir "los minutos no deben pasar de 59"
+				escribir "ingresa una hora corecta: "
+				leer minufin
+			Hasta Que minufin <= 59 o minufin >= 0
+		Fin Mientras
+	FinSi
+	//pedir al usuario segundos finales
+	Escribir "ingrese segundos finales: "
+	leer Segufin
+	//condicional de segundos finales
+	si Segufin > 59 o Segufin < 0 entonces
+		Escribir "los segundos no deben pasar de 59"
+		escribir "ingresa una cantidad de segundos correcta: "
+		leer Segufin
+		Mientras Segufin >= 60 o segufin < 0 Hacer
+			Repetir
+				Escribir "los segundos ni deben pasar de 59"
+				escribir "ingresa una hora corecta: "
+				leer segufin
+			Hasta Que segufin <= 59 o segufin >= 0
+		Fin Mientras
+	FinSi
+Escribir "la hora final ingresada es: " , "hora: " , hfin ,  " minutos: ", minufin , " segundos: ", segufin	
+//operaciones para la diferencia horaria
+// conversion de horas
+// de horas a minutos H*60 de minutos a segundos M*60 // de segundos a minutos S/60 de minutos a horas M/60
+// conversion de horas dadas
+tshi = (hini * 60) * 60
+tshf = (hfin * 60) * 60
+//conversion de minutos
+tsmi = (minuini * 60)
+tsmf = (minufin * 60)
+// conversion de segundos no necesaria
+// sumatoria de segundos
+smsi = tshi + tsmi + seguini
+smsf = tshf + tsmf + segufin
+//calculamos diferencias
+diferencias = smsf - smsi
+//convetimos esas diferencias a horas minutos y segundos
+Dhora <- (diferencias / 3600)
+horasindecimal <- trunc(Dhora)
+//convertimos a minutos
+Dminutos <- (diferencias % 3600) / 60
+minutossindecimal <- trunc(dminutos)
+Dsegundos <- (diferencias % 60)
+segundossindecimal <- trunc(Dsegundos)
+Escribir "hora: ", horasindecimal , " minutos: " , minutossindecimal , " segundos: " segundossindecimal 
+FinAlgoritmo
